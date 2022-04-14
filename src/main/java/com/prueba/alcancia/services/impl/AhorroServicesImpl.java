@@ -26,8 +26,8 @@ public class AhorroServicesImpl implements AhorroService{
     }
 
     @Override
-    public int totalAhorro() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Long totalAhorro() {
+        return ahorroRepository.sumTotals();
     }
 
     @Override
@@ -36,13 +36,13 @@ public class AhorroServicesImpl implements AhorroService{
     }
 
     @Override
-    public int cantidadMonedasDenominacion() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Long cantidadMonedasDenominacion(int denominacion) {
+        return ahorroRepository.sumQuantitiesByDenomination(denominacion);
     }
 
     @Override
-    public int totalAhorradoDenominacion() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Long totalAhorradoDenominacion(int denominacion) {
+        return ahorroRepository.sumTotalsByDenomination(denominacion);
     }
     
 }

@@ -12,8 +12,8 @@ import com.prueba.alcancia.entity.Ahorro;
  */
 public interface AhorroService {
     public Ahorro save(Ahorro ahorro);
-    int totalAhorro();
+    Long totalAhorro();
     Long cantidadMoneda();
-    int cantidadMonedasDenominacion();
-    int totalAhorradoDenominacion();
+    Long cantidadMonedasDenominacion(int denominacion);
+    Long totalAhorradoDenominacion(int denominacion);
 }
